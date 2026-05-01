@@ -1,0 +1,236 @@
+/* ========================================
+   TOKENS
+   Define your design decisions here.
+   Everything else in this file should
+   reference these tokens with var().
+   ======================================== */
+:root {
+    /* Colors */
+    --color-primary:     #1b2a4a; 
+    --color-background:  #f7f4ef;   
+    --color-surface:     #ffffff;   
+    --color-accent:      #c0562a;   
+    --color-text:        #2c2c2c;   
+    --color-muted:       #7a7068;  
+    --color-border:      #ddd8cf;   
+
+    /* Spacing */
+    --space-sm:  0.5rem;
+    --space-md:  1rem;
+    --space-lg:  2rem;
+
+    /* Typography */
+    --font-display: 'Georgia', 'Times New Roman', serif;
+    --font-body:    'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    --font-size-base: clamp(0.95rem, 1vw + 0.75rem, 1.1rem);
+
+    /* Borders */
+    --radius-sm: 4px;
+    --radius-md: 10px;
+}
+
+/* ========================================
+   RESET
+   A minimal reset so you start clean.
+   ======================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========================================
+   BASE STYLES
+   Style the body, links, and any raw
+   HTML elements here. Use nesting.
+   ======================================== */
+body {
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    line-height: 1.7;
+    padding: var(--space-md) clamp(var(--space-md), 5vw, 4rem);
+
+    a {
+        color: var(--color-accent);
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: var(--color-primary);
+        }
+    }
+}
+
+/* ========================================
+   NAVIGATION
+   Style .site-nav so students can get
+   back to the homepage.
+   ======================================== */
+.site-nav {
+    padding: var(--space-sm) 0;
+    margin-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--color-border);
+
+    a {
+        font-family: var(--font-display);
+        font-size: 0.875rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--color-muted);
+
+        &:hover {
+            color: var(--color-primary);
+        }
+    }
+}
+
+/* ========================================
+   BOARD HEADER
+   Styel the page header area.
+   ======================================== */
+.board-header {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+    padding: var(--space-lg) 0;
+    border-bottom: 3px double var(--color-border);
+
+    h1 {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 4vw + 1rem, 3.5rem);
+        color: var(--color-primary);
+        letter-spacing: -0.02em;
+        line-height: 1.15;
+        margin-bottom: var(--space-sm);
+    }
+
+    p {
+        color: var(--color-muted);
+        font-size: clamp(0.9rem, 1vw + 0.6rem, 1.05rem);
+        font-style: italic;
+        margin-top: var(--space-sm);
+    }
+}
+
+/* ========================================
+   CARD GROUP
+   Each section of cards (This Week,
+   Coming Up, Announcements).
+   ======================================== */
+.card-group {
+    margin-bottom: calc(var(--space-lg) * 1.75);
+
+    h2 {
+        font-family: var(--font-display);
+        font-size: clamp(1rem, 1.5vw + 0.6rem, 1.3rem);
+        color: var(--color-primary);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: var(--space-md);
+        padding-bottom: var(--space-sm);
+        border-bottom: 2px solid var(--color-accent);
+        display: inline-block;
+    }
+}
+
+/* ========================================
+   CARDS GRID
+   Layout the .cards container as a
+   responsive grid or flex layout.
+   ======================================== */
+.cards {
+    display: grid;
+    gap: calc(var(--space-md) * 1.25);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+}
+
+/* ========================================
+   INDIVIDUAL CARD
+   Style each .card article. This is where
+   most of your nesting wil happen.
+   ======================================== */
+.card {
+    background: var(--color-surface, #fff);
+    padding: var(--space-md) calc(var(--space-md) * 1.25);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    border-top: 3px solid var(--color-primary);
+    box-shadow: 0 2px 8px rgba(27, 42, 74, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+        box-shadow: 0 6px 20px rgba(27, 42, 74, 0.12);
+        transform: translateY(-2px);
+    }
+
+    .card-tag {
+        font-size: 0.7rem;
+        font-family: var(--font-display);
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+        font-weight: bold;
+        color: var(--color-accent);
+        background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+        border: 1px solid color-mix(in srgb, var(--color-accent) 25%, transparent);
+        padding: 2px var(--space-sm);
+        border-radius: var(--radius-sm);
+        align-self: flex-start;
+    }
+
+    h3 {
+        font-family: var(--font-display);
+        font-size: clamp(1rem, 1.2vw + 0.6rem, 1.15rem);
+        color: var(--color-primary);
+        line-height: 1.3;
+    }
+
+    p {
+        font-size: 0.92rem;
+        color: var(--color-text);
+        line-height: 1.65;
+        flex: 1;
+    }
+
+    .card-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: var(--space-sm);
+        padding-top: var(--space-sm);
+        border-top: 1px solid var(--color-border);
+
+        span {
+            font-size: 0.8rem;
+            color: var(--color-muted);
+            font-style: italic;
+        }
+
+        a {
+            font-size: 0.8rem;
+            font-family: var(--font-display);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+    }
+}
+
+/* ========================================
+   FOOTER
+   Style the .board-footer at the bottom.
+   ======================================== */
+.board-footer {
+    text-align: center;
+    padding: var(--space-lg) 0 var(--space-md);
+    margin-top: var(--space-lg);
+    border-top: 1px solid var(--color-border);
+    color: var(--color-muted);
+    font-size: 0.82rem;
+    font-style: italic;
+}
