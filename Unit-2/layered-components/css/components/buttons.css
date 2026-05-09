@@ -1,0 +1,70 @@
+/* Button components: .btn, .primary, .secondary, disabled state
+   Use native nesting for pseudo-classes and modifiers. */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-sm) var(--space-md);
+    font-family: var(--font-family-ui);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+    border-radius: var(--radius-md);
+    border: 2px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--transition-fast),
+                color var(--transition-fast),
+                border-color var(--transition-fast),
+                box-shadow var(--transition-fast);
+
+    &:not(:disabled):hover {
+        box-shadow: var(--shadow-md);
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--color-focus-ring);
+        outline-offset: 3px;
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.45;
+    }
+
+    &.primary {
+        background-color: var(--color-primary);
+        color: var(--color-text-on-primary);
+        border-color: var(--color-primary);
+
+        &:not(:disabled):hover {
+            background-color: var(--color-primary-dark);
+            border-color: var(--color-primary-dark);
+        }
+
+        &:not(:disabled):active {
+            background-color: var(--color-primary-dark);
+            box-shadow: none;
+        }
+    }
+
+    &.secondary {
+        background-color: transparent;
+        color: var(--color-primary);
+        border-color: var(--color-primary);
+
+        &:not(:disabled):hover {
+            background-color: var(--color-surface-muted);
+        }
+
+        &:not(:disabled):active {
+            background-color: var(--color-border);
+            box-shadow: none;
+        }
+    }
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}

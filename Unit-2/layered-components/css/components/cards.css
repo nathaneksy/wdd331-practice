@@ -1,0 +1,86 @@
+/* Card components: .card-group, .cards grid, .card, .card-tag, .card-footer
+   Use native nesting. Reference tokens with var(). */
+.card-group {
+    margin-block-end: var(--space-lg);
+
+    h2 {
+        margin-block-end: var(--space-md);
+        color: var(--color-text);
+    }
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(clamp(260px, 30%, 380px), 1fr));
+    gap: var(--space-md);
+}
+
+.card {
+    background-color: var(--color-surface);
+    border: var(--border-standard);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow var(--transition-normal), transform var(--transition-normal);
+
+    &:hover {
+        box-shadow: var(--shadow-md);
+        transform: translateY(-2px);
+    }
+
+    h3 {
+        font-size: var(--font-size-lg);
+        margin-block: var(--space-sm) var(--space-sm);
+        color: var(--color-text);
+    }
+
+    p {
+        color: var(--color-text-muted);
+        font-size: var(--font-size-base);
+        flex: 1;
+    }
+}
+
+.card-tag {
+    display: inline-block;
+    font-family: var(--font-family-ui);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-accent);
+    background-color: color-mix(in srgb, var(--color-accent-light) 20%, transparent);
+    border-radius: var(--radius-sm);
+    padding: 2px var(--space-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-start: var(--space-md);
+    padding-block-start: var(--space-sm);
+    border-top: var(--border-standard);
+    font-family: var(--font-family-ui);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+
+    a {
+        color: var(--color-primary);
+        font-weight: var(--font-weight-bold);
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--color-focus-ring);
+            outline-offset: 3px;
+            border-radius: var(--radius-sm);
+        }
+    }
+}
