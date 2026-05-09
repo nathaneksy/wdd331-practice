@@ -1,0 +1,72 @@
+/* Form components: .note-form, .form-field, inputs, textarea, select
+   Use native nesting. Add :focus-visible styles to all inputs. */
+.study-note {
+    background-color: var(--color-surface);
+    border: var(--border-standard);
+    border-radius: var(--radius-md);
+    padding: var(--space-md) var(--space-lg);
+    box-shadow: var(--shadow-sm);
+    margin-block-end: var(--space-lg);
+
+    h2 {
+        margin-block-end: var(--space-md);
+    }
+}
+
+.note-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+
+    label {
+        font-family: var(--font-family-ui);
+        font-size: var(--font-size-sm);
+        font-weight: var(--font-weight-bold);
+        color: var(--color-text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    :is(input, textarea, select) {
+        width: 100%;
+        padding: var(--space-sm) var(--space-md);
+        font-family: var(--font-family-body);
+        font-size: var(--font-size-base);
+        color: var(--color-text);
+        background-color: var(--color-background);
+        border: var(--border-standard);
+        border-radius: var(--radius-sm);
+        transition: border-color var(--transition-fast),
+                    box-shadow var(--transition-fast);
+
+        &::placeholder {
+            color: var(--color-border);
+        }
+
+        &:focus-visible {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-focus-ring) 20%, transparent);
+        }
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 6rem;
+    }
+
+    select {
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235c5852' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right var(--space-md) center;
+        padding-inline-end: calc(var(--space-md) * 2.5);
+        cursor: pointer;
+    }
+}
