@@ -1,5 +1,11 @@
-/* Utility classes: single-purpose helpers.
-   These live in the last layer so they override components
-   by layer order without needing !important. */
-
-/* TODO: Add any utility classes you find useful */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
