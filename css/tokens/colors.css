@@ -1,6 +1,22 @@
-/* Color tokens: define all color values for the site.
-   Name by purpose (--color-primary, --color-surface)
-   not appearance (--blue, --light-gray). */
 :root {
-    /* TODO: Define color tokens here */
+    --color-primary: #4a6741;
+    --color-primary-light: #6b8f61;
+    --color-primary-dark: #2f4228;
+
+    --color-background: #faf7f2;
+    --color-surface: #ffffff;
+    --color-surface-muted: #f0ebe2;
+
+    --color-text: #1e1e1e;
+    --color-text-muted: #5c5852;
+    --color-text-on-primary: #ffffff;
+
+    --color-accent: #b87333;
+    --color-accent-light: #d4956a;
+
+    --color-status-open: #2e6b3e;
+    --color-status-construction: #8a6200;
+
+    --color-border: #d9d2c7;
+    --color-focus-ring: #4a6741;
 }

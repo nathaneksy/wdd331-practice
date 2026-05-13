@@ -1,0 +1,27 @@
+{
+  "name": "wdd331-practice",
+  "version": "1.0.0",
+  "description": "**Student:** Nathan Escujuri\r **Semester:** 9th Semester, Senior\r **Live Site:** https://nathaneksy.github.io/wdd331-practice/",
+  "main": "index.js",
+"scripts": {
+  "build": "lightningcss --bundle css/main.css -o dist/styles.css --minify",
+  "build:css": "lightningcss --bundle css/main.css -o dist/styles.css --minify",
+  "watch": "lightningcss --bundle css/main.css -o dist/styles.css --minify --watch",
+  "test": "echo \"Error: no test specified\" && exit 1"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathaneksy/wdd331-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/nathaneksy/wdd331-practice/issues"
+  },
+  "homepage": "https://github.com/nathaneksy/wdd331-practice#readme",
+  "devDependencies": {
+    "lightningcss-cli": "^1.32.0"
+  }
+}

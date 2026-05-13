@@ -4,23 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nathan Escujuri - Practice Site</title>
-    <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-    <h1>Welcome to my practice site</h1>
-    <nav>
-    <h2>Assignments</h2>
-    <ul>
-        <li>
-            <a href="unit-1/custom-properties/index.html">
-               | Custom Properties and Nesting |
-            </a>
 
-            <a href="Unit-2/layered-components/index.html">
-               | Layered Components |
-            </a>
-        </li>
-    </ul>
-</nav>
+    <link rel="stylesheet" href="/wdd331-practice/dist/styles.css">
+</head>
+
+<body>
+    <header class="hero">
+        <p class="hero__eyebrow">WDD 331 Advanced CSS</p>
+
+        <h1>Nathan Escujuri</h1>
+
+        <p class="hero__description">
+            A collection of assignments, experiments, and design exercises
+            built throughout the semester using layered CSS architecture,
+            design tokens, and modern frontend workflows.
+        </p>
+    </header>
+
+    <main class="homepage-layout">
+
+        <section class="assignment-section">
+            <h2>Assignments & Choose Topics</h2>
+
+            <div class="card-grid">
+
+                <article class="card">
+                    <h3>Custom Properties and Nesting</h3>
+
+                    <p>
+                        Explored design tokens, custom properties,
+                        responsive spacing, and native CSS nesting.
+                    </p>
+
+                    <a class="card__link"
+                       href="unit-1/custom-properties/index.html">
+                        View Project →
+                    </a>
+                </article>
+
+                <article class="card">
+                    <h3>Layered Components</h3>
+
+                    <p>
+                        Built reusable layered CSS architecture using
+                        tokens, components, layout systems, and utilities.
+                    </p>
+
+                    <a class="card__link"
+                       href="Unit-2/layered-components/index.html">
+                        View Project →
+                    </a>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
 </body>
 </html>

@@ -4,6 +4,38 @@
 **Semester:** 9th Semester, Senior
 **Live Site:** https://nathaneksy.github.io/wdd331-practice/
 
+# CSS Architecture
+css/
+├── base/
+│   ├── elements.css
+│   └── reset.css
+├── components/
+│   └── card.css
+├── layout/
+│   └── home.css
+├── tokens/
+│   ├── colors.css
+│   └── variables.css
+├── utilities/
+│   └── utilities.css
+└── main.css
+
+# Build Tool
+
+This project uses Lightning CSS for:
+- CSS bundling
+- minification
+- import processing
+- watch mode development
+
+# Build CSS
+
+Generate the production stylesheet:
+
+```bash
+npm run build
+```
+
 ## About
 
 This repository is my Practice Site for WDD 331R: Advanced CSS.
