@@ -1,0 +1,261 @@
+.layered-components-page .site-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    padding: var(--space-sm) var(--space-lg);
+    background-color: var(--color-surface);
+    border-bottom: var(--border-standard);
+    font-family: var(--font-family-ui);
+    font-size: var(--font-size-sm);
+}
+
+.layered-components-page .site-nav ul {
+    display: flex;
+    gap: var(--space-md);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.layered-components-page .site-nav a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-weight: var(--font-weight-bold);
+}
+
+.layered-components-page .site-nav a:hover {
+    color: var(--color-primary);
+}
+
+.layered-components-page .site-nav [aria-current="page"] {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.layered-components-page .card-group {
+    margin-block-end: var(--space-lg);
+}
+
+.layered-components-page .card-group h2 {
+    margin-block-end: var(--space-md);
+    color: var(--color-text);
+}
+
+.layered-components-page .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(clamp(260px, 30%, 380px), 1fr));
+    gap: var(--space-md);
+}
+
+.layered-components-page .card {
+    background-color: var(--color-surface);
+    border: var(--border-standard);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow var(--transition-normal), transform var(--transition-normal);
+}
+
+.layered-components-page .card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.layered-components-page .card h3 {
+    font-size: var(--font-size-lg);
+    margin-block: var(--space-sm);
+    color: var(--color-text);
+}
+
+.layered-components-page .card p {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-base);
+    flex: 1;
+}
+
+.layered-components-page .card-tag {
+    display: inline-block;
+    font-family: var(--font-family-ui);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-accent);
+    background-color: color-mix(in srgb, var(--color-accent) 12%, transparent);
+    border-radius: var(--radius-sm);
+    padding: 2px var(--space-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.layered-components-page .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-start: var(--space-md);
+    padding-block-start: var(--space-sm);
+    border-top: var(--border-standard);
+    font-family: var(--font-family-ui);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.layered-components-page .card-footer a {
+    color: var(--color-primary);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+}
+
+.layered-components-page .button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.layered-components-page .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-sm) var(--space-md);
+    font-family: var(--font-family-ui);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+    border-radius: var(--radius-md);
+    border: 2px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    transition:
+        background-color var(--transition-fast),
+        color var(--transition-fast),
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast);
+}
+
+.layered-components-page .btn.primary {
+    background-color: var(--color-primary);
+    color: var(--color-text-on-primary);
+    border-color: var(--color-primary);
+}
+
+.layered-components-page .btn.primary:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+}
+
+.layered-components-page .btn.secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.layered-components-page .btn.secondary:hover {
+    background-color: var(--color-surface-muted);
+}
+
+.layered-components-page .btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+}
+
+.layered-components-page .study-note {
+    background-color: var(--color-surface);
+    border: var(--border-standard);
+    border-radius: var(--radius-md);
+    padding: var(--space-md) var(--space-lg);
+    box-shadow: var(--shadow-sm);
+    margin-block-end: var(--space-lg);
+}
+
+.layered-components-page .note-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.layered-components-page .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.layered-components-page .form-field label {
+    font-family: var(--font-family-ui);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.layered-components-page .form-field :is(input, textarea, select) {
+    width: 100%;
+    padding: var(--space-sm) var(--space-md);
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-base);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    border: var(--border-standard);
+    border-radius: var(--radius-sm);
+}
+
+.layered-components-page .form-field textarea {
+    resize: vertical;
+    min-height: 6rem;
+}
+
+.layered-components-page .temple-list {
+    margin-block-end: var(--space-lg);
+}
+
+.layered-components-page .temples {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: var(--border-standard);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.layered-components-page .temples li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-sm) var(--space-md);
+    background-color: var(--color-surface);
+}
+
+.layered-components-page .temples li:not(:first-child) {
+    border-top: var(--border-standard);
+}
+
+.layered-components-page .temples li:nth-child(even) {
+    background-color: var(--color-surface-muted);
+}
+
+.layered-components-page .temple-name {
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-base);
+    color: var(--color-text);
+}
+
+.layered-components-page .temple-status {
+    font-family: var(--font-family-ui);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    padding: 2px var(--space-sm);
+    border-radius: var(--radius-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.layered-components-page .temple-status.open {
+    color: var(--color-status-open);
+    background-color: color-mix(in srgb, var(--color-status-open) 12%, transparent);
+}
+
+.layered-components-page .temple-status.construction {
+    color: var(--color-status-construction);
+    background-color: color-mix(in srgb, var(--color-status-construction) 12%, transparent);
+}

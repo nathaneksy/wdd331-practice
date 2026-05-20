@@ -4,21 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nathan Escujuri - Practice Site</title>
-
+    <script src="js/theme-preference.js"></script>
     <link rel="stylesheet" href="dist/styles.css">
 </head>
 
 <body>
     <header class="hero">
-        <p class="hero__eyebrow">WDD 331 Advanced CSS</p>
+
+        <div class="hero__topbar">
+
+            <p class="hero__eyebrow">
+                WDD 331: Advanced CSS
+            </p>
+
+            <details class="theme-menu">
+                <summary class="theme-control">
+                    <span class="visually-hidden">
+                        Color scheme
+                    </span>
+                </summary>
+
+                <div
+                    class="theme-extra"
+                    role="group"
+                    aria-label="Choose color scheme"
+                >
+
+                    <label
+                        class="theme-control theme-pick"
+                        data-theme-pick="light"
+                    >
+                        <input
+                            name="theme-preference"
+                            type="radio"
+                            value="light"
+                        >
+
+                        <span aria-hidden="true">
+                            &#9788;&#65039;
+                        </span>
+
+                        <span class="visually-hidden">
+                            Light
+                        </span>
+                    </label>
+
+                    <label
+                        class="theme-control theme-pick"
+                        data-theme-pick="system"
+                    >
+                        <input
+                            name="theme-preference"
+                            type="radio"
+                            value="system"
+                            checked
+                        >
+
+                        <span aria-hidden="true">
+                            &#9881;&#65039;
+                        </span>
+
+                        <span class="visually-hidden">
+                            System default
+                        </span>
+                    </label>
+
+                    <label
+                        class="theme-control theme-pick"
+                        data-theme-pick="dark"
+                    >
+                        <input
+                            name="theme-preference"
+                            type="radio"
+                            value="dark"
+                        >
+
+                        <span aria-hidden="true">
+                            &#127766;
+                        </span>
+
+                        <span class="visually-hidden">
+                            Dark
+                        </span>
+                    </label>
+
+                </div>
+            </details>
+
+        </div>
 
         <h1>Nathan Escujuri</h1>
 
         <p class="hero__description">
-            A collection of assignments, experiments, and design exercises
-            built throughout the semester using layered CSS architecture,
-            design tokens, and modern frontend workflows.
+            A collection of assignments, experiments,
+            and design exercises built throughout the semester
+            using layered CSS architecture, design tokens,
+            and modern frontend workflows.
         </p>
+
     </header>
 
     <main class="homepage-layout">
