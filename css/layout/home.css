@@ -31,3 +31,11 @@
 .assignment-section h2 {
     margin-bottom: var(--space-lg);
 }
+.hero__topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-md);
+
+    margin-bottom: var(--spacing-lg);
+}

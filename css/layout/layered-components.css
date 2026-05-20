@@ -1,0 +1,25 @@
+.layered-components-page {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+.layered-components-page main {
+    flex: 1;
+    max-width: 64rem;
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: var(--space-md);
+}
+
+.layered-components-page main > section {
+    margin-bottom: var(--space-xl);
+}
+
+.layered-components-page .page-header,
+.layered-components-page .page-footer {
+    max-width: 64rem;
+    width: 100%;
+    margin-inline: auto;
+    padding: var(--space-lg) var(--space-md);
+}

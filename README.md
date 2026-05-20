@@ -43,6 +43,8 @@ Each week I add new pages and styles as I work through the course
 assignments. The site deploys automatically to GitHub Pages on
 every push to main.
 
+This site also supports light and dark mode as well as a browser default. The color tokens are inside css/tokens/colors.css
+
 ## Pages
 
 - [Home](index.html)
