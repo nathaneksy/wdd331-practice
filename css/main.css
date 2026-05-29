@@ -13,5 +13,6 @@
 @import "./components/theme-toggle.css" layer(components);
 @import "./components/layered-components.css" layer(components);
 @import "./components/custom-properties.css" layer(components);
+@import "./components/effects.css" layer(components);
 
 @import "./utilities/utilities.css" layer(utilities);
