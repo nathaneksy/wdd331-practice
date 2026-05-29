@@ -50,3 +50,4 @@ This site also supports light and dark mode as well as a browser default. The co
 - [Home](index.html)
 - [Custom Properties and Nesting](unit-1/custom-properties/index.html)
 - [Layered Components](unit-2/layered-components/index.html)
+- [Visual Effects](unit-3/visual-effects/index.html)
