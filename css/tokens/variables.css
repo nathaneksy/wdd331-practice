@@ -1,11 +1,9 @@
 :root {
     /* Typography */
-    --font-family-sans: system-ui, sans-serif;
-    --font-family-mono: monospace;
-
-    --font-size-sm: 1.4rem;
-    --font-size-md: 1.6rem;
-    --font-size-lg: 1.8rem;
+    /* Typography */
+    --font-display: 'Georgia', 'Times New Roman', serif;
+    --font-body:    'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    --font-size-base: clamp(0.95rem, 1vw + 0.75rem, 1.1rem);
 
     /* Spacing */
     --spacing-xs: 4px;
