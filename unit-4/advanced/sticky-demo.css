@@ -1,0 +1,56 @@
+.sticky-header,
+.sticky-layout {
+  width: min(1100px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.sticky-header {
+  padding-block: var(--space-xl);
+}
+
+.sticky-layout {
+  display: grid;
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+.article-content,
+.sticky-note {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+}
+
+.article-content p {
+  margin-block: var(--space-lg);
+}
+
+.sticky-note {
+  position: sticky;
+  top: var(--sticky-offset, var(--space-lg));
+}
+
+.sticky-note h2 {
+  margin-block-start: 0;
+}
+
+@media (min-width: 800px) {
+  .sticky-layout {
+    grid-template-columns: minmax(0, 1fr) 280px;
+  }
+}
+
+.sticky-layout {
+  display: grid;
+  gap: var(--space-lg);
+  align-items: start;
+
+  /*
+    Sticky bug fix:
+    I tested overflow: hidden here and it broke the sticky sidebar because
+    an overflowed ancestor becomes the sticky element's.
+    I removed overflow from this wrapper and kept the rounded visual
+    styling on the article.
+  */
+}

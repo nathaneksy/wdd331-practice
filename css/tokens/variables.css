@@ -5,6 +5,8 @@
     --font-body:    'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     --font-size-base: clamp(0.95rem, 1vw + 0.75rem, 1.1rem);
 
+    --sticky-offset: var(--spacing-lg);
+
     /* Spacing */
     --spacing-xs: 4px;
     --spacing-sm: 8px;
@@ -67,3 +69,4 @@
     --transition-fast: var(--transition-base);
     --transition-normal: 250ms ease;
 }
+
