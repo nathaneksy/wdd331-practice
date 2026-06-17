@@ -1,0 +1,207 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f4f4f5;
+  color: #18181b;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+p {
+  max-width: 650px;
+  line-height: 1.5;
+}
+
+.controls {
+  margin: 1.5rem 0;
+}
+
+.control-btn,
+.anchor-btn {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+.control-btn {
+  background: #27272a;
+  color: white;
+}
+
+.demo-area {
+  position: relative;
+  min-height: 500px;
+  border: 2px dashed #a1a1aa;
+  border-radius: 1rem;
+  background: white;
+  overflow: hidden;
+}
+
+.edge-buttons {
+  padding: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.anchor-btn {
+  anchor-name: --demo-anchor;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+}
+
+.tooltip {
+  position: absolute;
+  position-anchor: --demo-anchor;
+  position-area: top;
+  margin: 1rem;
+
+  width: 280px;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: #18181b;
+  color: white;
+
+  position-try-fallbacks: bottom;
+}
+
+.tooltip.top {
+  position-area: top;
+}
+
+.tooltip.bottom {
+  position-area: bottom;
+}
+
+.tooltip.left {
+  position-area: left;
+}
+
+.tooltip.right {
+  position-area: right;
+}
+
+.no-fallbacks .tooltip {
+    position-try-fallbacks: bottom, left, right;
+}
+
+
+
+/* Small arrow */
+.tooltip::after {
+  content: "";
+  position: absolute;
+  width: 0.75rem;
+  height: 0.75rem;
+  background: inherit;
+  rotate: 45deg;
+
+  position-anchor: --demo-anchor;
+  position-area: bottom;
+}
+
+.support-warning {
+  display: none;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 2px solid red;
+  background: #fee2e2;
+  color: #7f1d1d;
+  font-weight: bold;
+}
+
+@supports not (anchor-name: --test) {
+  .support-warning {
+    display: block;
+  }
+
+  .tooltip {
+    position: static;
+    margin-top: 1rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.btn {
+    anchor-name: --my-btn;
+}
+
+.tooltip {
+    position: absolute;
+    position-anchor: --my-btn;
+}
+
+
+
+.parent {
+    position: relative;
+}
+
+.tooltip {
+    position: absolute;
+}
+
+
+
+
+.tooltip {
+    position: absolute;
+    position-anchor: --my-btn;
+
+    bottom: anchor(top);
+    left: anchor(center);
+
+    translate: -50% 0;
+}
+
+
+
+.tooltip {
+    position: absolute;
+    position-anchor: --my-btn;
+
+    position-area: top;
+}
+
+
+
+.tooltip {
+    position-area: top;
+
+    position-try-fallbacks:
+        position-area(bottom),
+        position-area(left),
+        position-area(right);
+}
+
+
+
+
+
+.dropdown {
+    width: anchor-size(width);
+}

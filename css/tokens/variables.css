@@ -1,57 +1,49 @@
 :root {
-    /* Typography */
-    /* Typography */
-    --font-display: 'Georgia', 'Times New Roman', serif;
-    --font-body:    'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-    --font-size-base: clamp(0.95rem, 1vw + 0.75rem, 1.1rem);
+--font-family-body: "Source Sans 3", system-ui, sans-serif;
+--font-family-heading: "Merriweather", Georgia, serif;
+--font-family-ui: var(--font-family-body);
 
-    --sticky-offset: var(--spacing-lg);
+--font-size-xs: 1.2rem;
+--font-size-sm: 1.5rem;
+--font-size-md: 1.8rem;
 
-    /* Spacing */
-    --spacing-xs: 4px;
-    --spacing-sm: 8px;
-    --spacing-md: 16px;
-    --spacing-lg: 24px;
-    --spacing-xl: 32px;
+--font-size-lg:
+    clamp(2rem, 0.45vw + 1.85rem, 2.3rem);
 
-    /* Radii */
-    --radius-sm: 4px;
-    --radius-md: 6px;
-    --radius-lg: 8px;
+--font-size-xl:
+    clamp(2.4rem, 0.7vw + 2.15rem, 3rem);
 
-    /* Transitions */
-    --transition-base: 0.2s ease;
+--font-size-2xl:
+    clamp(3rem, 1vw + 2.6rem, 4rem);
 
-    /* Icons */
-    --icon-size-sm: 24px;
-    --icon-size-md: 32px;
+--font-size-3xl:
+    clamp(3.6rem, 1.3vw + 3rem, 5rem);
 
-    /* Focus */
-    --outline-width: 2px;
+--font-size-body: var(--font-size-md);
+--font-size-caption: var(--font-size-xs);
 
-    /* Legacy aliases for older CSS */
-    --space-sm: var(--spacing-sm);
-    --space-md: var(--spacing-md);
-    --space-lg: var(--spacing-lg);
-    --space-xl: var(--spacing-xl);
+--font-size-heading-sm: var(--font-size-lg);
+--font-size-heading-md: var(--font-size-xl);
+--font-size-heading-lg: var(--font-size-2xl);
 
-    --font-family-body: var(--font-family-sans);
-    --font-family-heading: var(--font-family-sans);
-    --font-family-ui: var(--font-family-sans);
+--font-size-display: var(--font-size-3xl);
 
-    --font-size-base: var(--font-size-md);
-    --font-size-xl: 2.2rem;
-    --font-size-2xl: 2.8rem;
+--line-height-body: 1.7;
+--line-height-caption: 1.5;
 
-    --font-weight-normal: 400;
-    --font-weight-bold: 700;
+--line-height-heading: 1.25;
+--line-height-display: 1.1;
 
-    --line-height-body: 1.7;
-    --line-height-heading: 1.25;
+--font-size-base: var(--font-size-body);
 
-    --border-width: 1px;
-    --border-color: var(--color-border);
-    --border-standard: var(--border-width) solid var(--border-color);
+--font-weight-normal: 400;
+--font-weight-bold: 700;
+
+--line-height-heading: 1.25;
+
+--border-width: 1px;
+--border-color: var(--color-border);
+--border-standard: var(--border-width) solid var(--border-color);
 
 --shadow-sm:
     0 1px 2px light-dark(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.45)),

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Anchor Positioning Demo</title>
+  <link rel="stylesheet" href="./anchor-positioning-demo.css" />
+</head>
+<body>
+  <main class="page">
+    <h1>CSS Anchor Positioning Demo</h1>
+
+    <p>
+      Drag the button near the edges of the screen. Then turn fallbacks off and on
+      to see how anchor positioning handles overflow.
+    </p>
+
+    <div class="support-warning">
+  CSS Anchor Positioning is not supported in this browser.
+  Try the latest Chrome, Edge, Firefox, or Safari.
+</div>
+
+    <div class="controls">
+      <button id="fallbackToggle" class="control-btn">
+        Disable Fallbacks
+      </button>
+    </div>
+
+<section class="demo-area">
+  <div class="edge-buttons">
+    <button class="control-btn" data-position="top">Move to Top</button>
+    <button class="control-btn" data-position="bottom">Move to Bottom</button>
+    <button class="control-btn" data-position="left">Move to Left</button>
+    <button class="control-btn" data-position="right">Move to Right</button>
+  </div>
+
+  <button id="anchorBtn" class="anchor-btn">
+    Anchor Button
+  </button>
+
+  <div id="tooltip" class="tooltip">
+    This tooltip is intentionally large so overflow is obvious. With fallbacks on,
+    it should flip to another side when it does not fit.
+  </div>
+</section>
+  </main>
+
+  <script src="./anchor-positioning-demo.js"></script>
+</body>
+</html>

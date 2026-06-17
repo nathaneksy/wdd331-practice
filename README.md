@@ -36,6 +36,20 @@ Generate the production stylesheet:
 npm run build
 ```
 
+## Typography System
+
+Typography tokens are defined in:
+
+css/tokens/variables.css
+
+The site uses a Major Third modular scale with fluid typography powered by CSS clamp().
+
+Fonts:
+- Merriweather (headings)
+- Source Sans 3 (body text)
+
+Semantic role tokens are used throughout the site so typography can be updated from a single location.
+
 ## About
 
 This repository is my Practice Site for WDD 331R: Advanced CSS.
