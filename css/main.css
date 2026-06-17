@@ -1,5 +1,4 @@
 @layer tokens, base, layout, components, utilities;
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap');
 
 @import "./tokens/colors.css" layer(tokens);
 @import "./tokens/variables.css" layer(tokens);
