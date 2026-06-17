@@ -1,72 +1,82 @@
 :root {
-    /* Typography */
-    /* Typography */
-    --font-display: 'Georgia', 'Times New Roman', serif;
-    --font-body:    'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-    --font-size-base: clamp(0.95rem, 1vw + 0.75rem, 1.1rem);
+--font-family-body: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+--font-family-heading: "Lora", Georgia, serif;
+--font-family-ui: var(--font-family-body);
 
-    --sticky-offset: var(--spacing-lg);
+--font-size-xs: 0.875rem;
+--font-size-sm: 1rem;
+--font-size-md: 1.125rem;
 
-    /* Spacing */
-    --spacing-xs: 4px;
-    --spacing-sm: 8px;
-    --spacing-md: 16px;
-    --spacing-lg: 24px;
-    --spacing-xl: 32px;
+--font-size-lg:
+    clamp(1.5rem, 1vw + 1.25rem, 2rem);
 
-    /* Radii */
-    --radius-sm: 4px;
-    --radius-md: 6px;
-    --radius-lg: 8px;
+--font-size-xl:
+    clamp(2rem, 1.5vw + 1.5rem, 3rem);
 
-    /* Transitions */
-    --transition-base: 0.2s ease;
+--font-size-2xl:
+    clamp(2.5rem, 2vw + 2rem, 4rem);
 
-    /* Icons */
-    --icon-size-sm: 24px;
-    --icon-size-md: 32px;
+--font-size-caption: var(--font-size-xs);
+--font-size-body: var(--font-size-md);
 
-    /* Focus */
-    --outline-width: 2px;
+--font-size-heading-sm: var(--font-size-lg);
+--font-size-heading-lg: var(--font-size-xl);
+--font-size-display: var(--font-size-2xl);
 
-    /* Legacy aliases for older CSS */
-    --space-sm: var(--spacing-sm);
-    --space-md: var(--spacing-md);
-    --space-lg: var(--spacing-lg);
-    --space-xl: var(--spacing-xl);
+--font-display: var(--font-family-heading);
+--font-body: var(--font-family-body);
+--font-size-base: var(--font-size-body);
 
-    --font-family-body: var(--font-family-sans);
-    --font-family-heading: var(--font-family-sans);
-    --font-family-ui: var(--font-family-sans);
+--font-weight-normal: 400;
+--font-weight-bold: 700;
 
-    --font-size-base: var(--font-size-md);
-    --font-size-xl: 2.2rem;
-    --font-size-2xl: 2.8rem;
+--line-height-body: 1.7;
+--line-height-heading: 1.25;
+--line-height-display: 1.1;
 
-    --font-weight-normal: 400;
-    --font-weight-bold: 700;
+--spacing-xs: 4px;
+--spacing-sm: 8px;
+--spacing-md: 16px;
+--spacing-lg: 24px;
+--spacing-xl: 32px;
 
-    --line-height-body: 1.7;
-    --line-height-heading: 1.25;
+--radius-sm: 4px;
+--radius-md: 6px;
+--radius-lg: 8px;
 
-    --border-width: 1px;
-    --border-color: var(--color-border);
-    --border-standard: var(--border-width) solid var(--border-color);
+--transition-base: 0.2s ease;
+
+--icon-size-sm: 24px;
+--icon-size-md: 32px;
+
+--outline-width: 2px;
+
+--space-sm: var(--spacing-sm);
+--space-md: var(--spacing-md);
+--space-lg: var(--spacing-lg);
+--space-xl: var(--spacing-xl);
+
+--line-height-body: 1.7;
+--line-height-heading: 1.25;
+
+--border-width: 1px;
+--border-color: var(--color-border);
+--border-standard: var(--border-width) solid var(--border-color);
 
 --shadow-sm:
-    0 1px 2px light-dark(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.45)),
-    0 2px 4px light-dark(rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.35));
+0 1px 2px light-dark(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.45)),
+0 2px 4px light-dark(rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.35));
 
 --shadow-md:
-    0 4px 8px light-dark(rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.55)),
-    0 8px 16px light-dark(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.45));
+0 4px 8px light-dark(rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.55)),
+0 8px 16px light-dark(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.45));
 
 --shadow-lg:
-    0 8px 16px light-dark(rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.65)),
-    0 16px 32px light-dark(rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.55)),
-    0 24px 48px light-dark(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.45));
+0 8px 16px light-dark(rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.65)),
+0 16px 32px light-dark(rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.55)),
+0 24px 48px light-dark(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.45));
 
-    --transition-fast: var(--transition-base);
-    --transition-normal: 250ms ease;
+--transition-fast: var(--transition-base);
+--transition-normal: 250ms ease;
 }
 
