@@ -9,6 +9,8 @@
 @import "./layout/home.css" layer(layout);
 @import "./layout/layered-components.css" layer(layout);
 
+@import "./layout/resume.css" layer(layout);
+
 @import "./components/card.css" layer(components);
 @import "./components/theme-toggle.css" layer(components);
 @import "./components/layered-components.css" layer(components);
@@ -16,3 +18,41 @@
 @import "./components/effects.css" layer(components);
 
 @import "./utilities/utilities.css" layer(utilities);
+
+@media print {
+
+    nav,
+    footer,
+    button,
+    .site-header,
+    .site-footer {
+        display: none;
+    }
+
+    body {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 11pt;
+        color: black;
+        background: white;
+    }
+
+    a::after {
+        content: " (" attr(href) ")";
+        font-size: 9pt;
+    }
+
+    article {
+        break-inside: avoid;
+    }
+
+    p,
+    li {
+        orphans: 3;
+        widows: 3;
+    }
+
+    .resume-header {
+        print-color-adjust: exact;
+    }
+
+}

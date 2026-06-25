@@ -68,3 +68,10 @@ This site also supports light and dark mode as well as a browser default. The co
 - [Grid Layouts](unit-4/grid-layouts/editorial.html)
 - [Container Demo](unit-4/advanced/container-demo.html)
 - [Sticky Demo](unit-4/advanced/sticky-demo.html)
+
+## New Features
+
+- Added a Resume/CV page
+- Added print-specific styles for clean PDF printing
+- Added a Contact page with a styled form
+- Audited and cleaned up CSS design tokens
