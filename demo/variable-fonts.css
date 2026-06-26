@@ -1,0 +1,116 @@
+/* Traditional approach */
+@font-face {
+  font-family: 'MyFont';
+  src: url('myfont-regular.woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('myfont-bold.woff2');
+  font-weight: 700;
+}
+
+/* Variable font approach */
+@font-face {
+  font-family: 'Recursive';
+  src: url('recursive-variable.woff2')
+       format('woff2-variations');
+
+  font-weight: 300 1000;
+  font-style: normal;
+}
+
+/* Predifined Weight */
+h1 {
+  font-weight: 820;
+}
+
+p {
+  font-weight: 340;
+}
+
+
+
+
+/* Weight Axis */
+h1 {
+  font-weight: 800;
+}
+
+/* Width Axis */
+h1 {
+  font-stretch: 125%;
+}
+
+/* Slant Axis */
+h1 {
+  font-style: oblique 10deg;
+}
+
+/* Italic Axis */
+h1 {
+  font-style: italic;
+}
+
+/* Optical Size Axis */
+body {
+  font-optical-sizing: auto;
+}
+
+
+
+/*Custom Axis */
+.casual {
+  font-variation-settings:
+    'MONO' 1,
+    'CASL' 0.8;
+}
+
+
+
+
+/* Remember this Behavior */
+.example {
+  font-variation-settings:
+    'MONO' 1,
+    'CASL' 0.8;
+}
+
+/* If we write this later */
+.example {
+  font-variation-settings:
+    'MONO' 0;
+}
+
+
+
+
+/* Animating Variable Fonts */
+.heading {
+  font-weight: 400;
+  transition: font-weight 300ms ease;
+}
+
+.heading:hover {
+  font-weight: 800;
+}
+
+/* Custom Axis Animation */
+.logo {
+  font-variation-settings: 'MONO' 0;
+  animation: shift 4s infinite alternate;
+}
+
+@keyframes shift {
+  to {
+    font-variation-settings: 'MONO' 1;
+  }
+}
+
+/* Performance Considerations */
+@media (prefers-reduced-motion: reduce) {
+  .logo {
+    animation: none;
+  }
+}
