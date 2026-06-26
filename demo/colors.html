@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="colors.css">
+    <title>Document</title>
+
+</head>
+<body>
+    <div class="controls">
+  <button data-scheme="light">Light</button>
+  <button data-scheme="dark">Dark</button>
+  <button data-scheme="system">System</button>
+</div>
+
+<form class="scheme-demo">
+  <label for="sd-name">Name</label>
+  <input type="text" id="sd-name" placeholder="Your name">
+
+  <label for="sd-email">Email</label>
+  <input type="email" id="sd-email" placeholder="you@example.com">
+
+  <label for="sd-date">Date</label>
+  <input type="date" id="sd-date">
+
+  <label for="sd-color">Favorite color</label>
+  <input type="color" id="sd-color" value="#006eb6">
+
+  <label for="sd-range">Volume</label>
+  <input type="range" id="sd-range" min="0" max="100" value="50">
+
+  <label for="sd-select">Category</label>
+  <select id="sd-select">
+    <option>Design</option>
+    <option>Development</option>
+    <option>Research</option>
+  </select>
+
+  <label>
+    <input type="checkbox" checked>
+    Subscribe to updates
+  </label>
+
+  <div>
+    <label><input type="radio" name="sd-size" checked> Small</label>
+    <label><input type="radio" name="sd-size"> Medium</label>
+    <label><input type="radio" name="sd-size"> Large</label>
+  </div>
+
+  <label for="sd-msg">Message</label>
+  <textarea id="sd-msg" placeholder="Write something..."></textarea>
+
+  <button type="button">Submit</button>
+</form>
+</body>
+
+    <script>
+    const root = document.documentElement;
+
+    document.querySelectorAll(".controls button").forEach(btn => {
+        btn.addEventListener("click", () => {
+        root.classList.remove("light", "dark", "system");
+
+        const scheme = btn.dataset.scheme;
+
+        if (scheme !== "light") {
+            root.classList.add(scheme);
+        }
+        });
+    });
+    </script>
+
+</html>

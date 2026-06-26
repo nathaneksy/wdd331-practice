@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Filter vs Backdrop-Filter Demo</title>
+  <link rel="stylesheet" href="filter-backdrop-demo.css" />
+</head>
+<body>
+  <header class="demo-header cheap-solid">
+    <div>
+      <h1>Filter vs Backdrop-Filter Demo</h1>
+      <p>Scroll this page with Chrome DevTools Paint Flashing.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Demo Instructions</h2>
+      <ol>
+        <li>Open Chrome DevTools.</li>
+        <li>Press <strong>Ctrl + Shift + P</strong> and search <strong>Show paint flashing</strong>.</li>
+        <li>Scroll the page and watch the sticky header repaint.</li>
+        <li>In the CSS file, switch the header class styles to compare performance.</li>
+      </ol>
+
+      <div class="demo-options">
+        <p><strong>Try changing the header class in HTML:</strong></p>
+        <code>backdrop-blur</code>
+        <code>cheap-solid</code>
+        <code>heavy-backdrop-blur</code>
+      </div>
+    </section>
+
+    <section class="comparison-grid">
+      <article class="demo-card normal-card">
+        <img src="https://picsum.photos/id/1015/600/400" alt="Mountain landscape" />
+        <h3>No Filter</h3>
+        <p>This is the baseline. No filter effect is being applied.</p>
+      </article>
+
+      <article class="demo-card filtered-card">
+        <img src="https://picsum.photos/id/1016/600/400" alt="River landscape" />
+        <h3>filter: blur(4px)</h3>
+        <p>This blurs the image itself. Small, static filters are usually fine.</p>
+      </article>
+
+      <article class="demo-card strong-filtered-card">
+        <img src="https://picsum.photos/id/1020/600/400" alt="Forest landscape" />
+        <h3>filter: blur(14px)</h3>
+        <p>Larger blur values increase GPU work because more neighboring pixels are sampled.</p>
+      </article>
+    </section>
+
+    <section class="glass-demo">
+      <div class="glass-panel">
+        <h2>Backdrop-Filter Panel</h2>
+        <p>This panel uses <code>backdrop-filter</code>, which filters what is behind the element.</p>
+        <p>Try scrolling while watching paint flashing in DevTools.</p>
+      </div>
+    </section>
+
+    <section class="image-grid">
+      <h2>Scrollable Image Grid</h2>
+      <p>The sticky header sits over this content. That makes <code>backdrop-filter</code> more expensive during scroll.</p>
+
+      <div class="tiles">
+        <div class="tile">One</div>
+        <div class="tile">Two</div>
+        <div class="tile">Three</div>
+        <div class="tile">Four</div>
+        <div class="tile">Five</div>
+        <div class="tile">Six</div>
+        <div class="tile">Seven</div>
+        <div class="tile">Eight</div>
+        <div class="tile">Nine</div>
+        <div class="tile">Ten</div>
+        <div class="tile">Eleven</div>
+        <div class="tile">Twelve</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

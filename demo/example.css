@@ -1,0 +1,16 @@
+/* 
+color-scheme: dark;
+
+color-scheme: light;
+
+color-scheme: light dark;
+
+<meta name="color-scheme" content="light dark">
+
+:root {
+  color-scheme: light dark;
+}
+
+background: Field;
+color: FieldText; 
+*/
