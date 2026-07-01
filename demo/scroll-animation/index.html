@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scroll Driven Animations Demo</title>
+  <link rel="stylesheet" href="scroll-driven.css" />
+</head>
+<body>
+
+  <div class="progress-bar"></div>
+
+  <header class="hero">
+    <h1>Scroll-Driven Animations</h1>
+    <p>Scroll down to see scroll() and view() in action</p>
+  </header>
+
+  <section class="comparison">
+  <h2>JS vs CSS Scroll Animations</h2>
+
+  <div class="compare-box js-box">
+    JavaScript: scroll event + manual math + rAF loop
+  </div>
+
+  <div class="compare-box css-box">
+    CSS: animation-timeline: scroll(root)
+  </div>
+</section>
+
+
+
+  <main class="container">
+
+    <section class="reveal-card">Card One</section>
+    <section class="reveal-card">Card Two</section>
+    <section class="reveal-card">Card Three</section>
+    <section class="reveal-card">Card Four</section>
+    <section class="reveal-card">Card Five</section>
+
+  </main>
+
+</body>
+</html>
