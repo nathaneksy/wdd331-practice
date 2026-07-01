@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  font-family: system-ui;
+  min-height: 200vh;
+}
+
+/* ---------------- Progress Bar (scroll()) ---------------- */
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: teal;
+
+  transform-origin: left;
+  transform: scaleX(0);
+
+  animation: progress-fill linear both;
+  animation-timeline: scroll(root);
+}
+
+@keyframes progress-fill {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+/* ---------------- Layout ---------------- */
+
+.hero {
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* ---------------- Cards (view()) ---------------- */
+
+.reveal-card {
+  padding: 2rem;
+  background: #f2f2f2;
+  border-radius: 12px;
+
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+/* Motion only */
+@media (prefers-reduced-motion: no-preference) {
+
+  @keyframes card-reveal {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .reveal-card {
+    animation: card-reveal ease-out both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 60%;
+  }
+}
+
+.comparison {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.compare-box {
+  margin: 1rem auto;
+  padding: 1.5rem;
+  max-width: 500px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.js-box {
+  background: #ffe5e5;
+}
+
+.css-box {
+  background: #e5fff0;
+}
+
