@@ -68,6 +68,7 @@ This site also supports light and dark mode as well as a browser default. The co
 - [Grid Layouts](unit-4/grid-layouts/editorial.html)
 - [Container Demo](unit-4/advanced/container-demo.html)
 - [Sticky Demo](unit-4/advanced/sticky-demo.html)
+- [Motion](unit-6/motion/index.html)
 
 ## New Features
 
