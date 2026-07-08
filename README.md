@@ -59,6 +59,8 @@ every push to main.
 
 This site also supports light and dark mode as well as a browser default. The color tokens are inside css/tokens/colors.css
 
+This site includes icons imports
+
 ## Pages
 
 - [Home](index.html)
