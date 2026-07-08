@@ -1,0 +1,29 @@
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.125em;
+    flex-shrink: 0;
+}
+.card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.hero__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+}
+
+.hero__github {
+    display: inline-flex;
+    color: inherit;
+    transition: opacity .2s ease;
+}
+
+.hero__github:hover {
+    opacity: .7;
+}

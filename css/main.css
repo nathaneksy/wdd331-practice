@@ -19,6 +19,8 @@
 
 @import "./utilities/utilities.css" layer(utilities);
 
+@import "./components/icons.css" layer(components);
+
 @media print {
 
     nav,
