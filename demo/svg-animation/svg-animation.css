@@ -1,0 +1,125 @@
+body{
+
+font-family:Arial;
+padding:2rem;
+
+}
+
+section{
+
+margin-bottom:3rem;
+
+}
+
+svg{
+
+border:1px solid #ddd;
+padding:1rem;
+
+}
+
+/* ----------------------- */
+/* Draw Animation */
+/* ----------------------- */
+
+.draw-path {
+    fill: none;
+    stroke: #0077cc;
+    stroke-width: 6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.animate {
+    animation: draw 1.2s ease-out forwards;
+}
+
+@keyframes draw{
+
+to{
+
+stroke-dashoffset:0;
+
+}
+
+}
+
+/* ----------------------- */
+/* Spinner */
+/* ----------------------- */
+
+.spinner {
+    fill: none;
+    stroke: orange;
+    stroke-width: 8;
+
+    /* Only show part of the circle */
+    stroke-dasharray: 120 70;
+
+    transform-origin: center;
+    transform-box: fill-box;
+
+    animation: spin .8s linear infinite;
+}
+
+.fix{
+
+transform-box:fill-box;
+
+}
+
+@keyframes spin{
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/* ----------------------- */
+/* Pulse */
+/* ----------------------- */
+
+.pulse{
+
+fill:crimson;
+
+animation:pulse 1.2s ease-in-out infinite alternate;
+
+}
+
+@keyframes pulse{
+
+to{
+
+transform:scale(.6);
+
+opacity:.4;
+
+}
+
+}
+
+/* ----------------------- */
+
+.slow *{
+
+animation-duration:4s !important;
+
+}
+
+/* ----------------------- */
+
+.reduce *{
+
+animation:none !important;
+
+}
+
+.reduce .draw-path{
+
+stroke-dashoffset:0 !important;
+
+}
